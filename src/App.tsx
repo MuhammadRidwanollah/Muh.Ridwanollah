@@ -6,9 +6,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import beranda from './screens/beranda';
-import notivikasi from './screens/notivikasi';
-import setelan from './screens/setelan';
+import Beranda from './screens/Beranda';
+import Notifikasi from './screens/Notifikasi';
+import Setelan from './screens/Setelan';
+import Login from './screens/Login';
 
 
 
@@ -19,19 +20,26 @@ const Tab = createBottomTabNavigator();
 function TabBawah() {
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Beranda" component={beranda} options={{
+      <Tab.Screen name="Login" component={Login
+      } options={{
+          tabBarLabel: 'Login',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="account" color={color} size={26} />
+          ),
+        }}/>
+      <Tab.Screen name="Beranda" component={Beranda} options={{
           tabBarLabel: 'Beranda',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
         }}/>
-      <Tab.Screen name="Notivikasi" component={notivikasi} options={{
+      <Tab.Screen name="Notifikasi" component={Notifikasi} options={{
           tabBarLabel: 'Notifikasi',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="bell" color={color} size={26} />
           ),
         }}/>
-      <Tab.Screen name="Setelan" component={setelan}options={{
+      <Tab.Screen name="Setelan" component={Setelan}options={{
           tabBarLabel: 'Setelan',
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="cog" color={color} size={26} />

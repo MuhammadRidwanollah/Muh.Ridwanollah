@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const notivikasi = () => {
+const Notifikasi = () => {
   return (
     <View>
-      <Text>notivikasi</Text>
+      <Text>Notifikasi</Text>
     </View>
   )
 }
 
-export default notivikasi
+export default Notifikasi
 
 const styles = StyleSheet.create({})
